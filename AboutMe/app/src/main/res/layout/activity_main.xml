@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="myName"
+            type="com.example.android.aboutme.MyName" />
+    </data>
 
     <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/small_padding"
-            android:text="@string/name" />
+            android:text="@={myName.name}" />
 
         <EditText
             android:id="@+id/nickname_edit"
@@ -46,7 +51,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:paddingBottom="@dimen/small_padding"
-            android:text=""
+            android:text="@={myName.nickname}"
             android:textAlignment="center"
             android:visibility="gone" />
 
